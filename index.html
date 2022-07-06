@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="top-right">
+      <div class="inner-o"></div>
+    </div>
+    <div class="bottom-left">
+      <div class="x">
+        <div class="x-left"></div>
+        <div class="x-right"></div>
+      </div>
+    </div>
+
+    <main class="main">
+      <div class="logo">
+        <div class="logo-x">
+          <div class="x-left"></div>
+          <div class="x-right"></div>
+        </div>
+        <div class="logo-o">
+          <div class="inner-o"></div>
+        </div>
+      </div>
+      <div class="switch">
+        <div class="active-btn"></div>
+        <button class="switch-btn multiplayer-btn active-btn" data-mode="M">
+          MULTIPLAYER
+        </button>
+        <button class="switch-btn cpu-btn" data-mode="C">vs CPU</button>
+      </div>
+      <button class="start">LET'S GO</button>
+    </main>
+    <script>
+      const switchBtn = document.querySelectorAll(".switch-btn");
+      const startBtn = document.querySelector(".start");
+      const tiles = document.querySelectorAll(".tile");
+      switchBtn.forEach((btn) => {
+        btn.addEventListener("click", function () {
+          removeActiveButtons();
+          btn.classList.add("active-btn");
+        });
+      });
+
+      startBtn?.addEventListener("click", function () {
+        const gameMode = document.getElementsByClassName("active-btn")[0];
+        gameMode.dataset.mode === "M"
+          ? localStorage.setItem("mode", "M")
+          : localStorage.setItem("mode", "C");
+        window.location.href = "play.html";
+      });
+
+      function removeActiveButtons() {
+        switchBtn.forEach((btn) => {
+          btn.classList.remove("active-btn");
+        });
+      }
+    </script>
+  </body>
+</html>

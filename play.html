@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <main class="main board-container">
+      <div class="board-top">
+        <div class="logo board-logo">
+          <div class="logo-x">
+            <div class="x-left board-x-left"></div>
+            <div class="x-right board-x-right"></div>
+          </div>
+          <div class="logo-o">
+            <div class="inner-o"></div>
+          </div>
+        </div>
+        <div class="turn"></div>
+        <div class="reset"><i class="fa-solid fa-rotate-left"></i></div>
+      </div>
+      <div class="board x">
+        <div class="tile tile-1"></div>
+        <div class="tile tile-2"></div>
+        <div class="tile tile-3"></div>
+        <div class="tile tile-4"></div>
+        <div class="tile tile-5"></div>
+        <div class="tile tile-6"></div>
+        <div class="tile tile-7"></div>
+        <div class="tile tile-8"></div>
+        <div class="tile tile-9"></div>
+      </div>
+      <div class="board-score">
+        <div class="x-score">
+          <span class="score-title">X (P1)</span><span class="score-x">14</span>
+        </div>
+        <div class="ties">
+          <span class="score-title">TIES</span><span class="score-tie">32</span>
+        </div>
+        <div class="o-score">
+          <span class="score-title">O (P2)</span><span class="score-o">11</span>
+        </div>
+      </div>
+    </main>
+    <div class="modal">
+      <span class="winner"></span>
+      <span class="modal-score">CURRENT SCORE</span>
+      <div class="board-score">
+        <div class="x-score">
+          <span class="score-title">X (P1)</span><span class="score-x"></span>
+        </div>
+        <div class="ties">
+          <span class="score-title">TIES</span><span class="score-tie"></span>
+        </div>
+        <div class="o-score">
+          <span class="score-title">O (P2)</span><span class="score-o"></span>
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="restart">RESTART</button
+        ><button class="next-round">NEXT ROUND</button>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/b5a6da69c0.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
